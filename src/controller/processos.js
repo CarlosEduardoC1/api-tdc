@@ -11,7 +11,7 @@ exports.salva = async (req, res, next) => {
 }
 
 exports.lista = async (req, res, next) => {
-    const busca = await connect.get('processos/get/' + req.params.id, req.body, { headers: {
+    const busca = await connect.get('processos/get/' + req.params.id, { headers: {
         'Accept': 'application/json',
         "Authorization":  req.headers.authorization
     } })
