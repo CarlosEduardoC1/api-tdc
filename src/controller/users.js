@@ -24,7 +24,7 @@ exports.getMail = async (req, res, next) => {
 }
 
 exports.lista = async (req, res, next) => {
-    const busca = await connect.get('/users/get-my/data/' + req.params.id, req.body, {
+    const busca = await connect.get('users/get-my/data/' + req.params.id, req.body, {
         headers: {
             'Accept': 'application/json',
             "Authorization":  req.headers.authorization
@@ -35,7 +35,7 @@ exports.lista = async (req, res, next) => {
 }
 
 exports.updt = async (req, res, next) => {
-    const busca = await connect.post('/users/update-process-file', req.body, {
+    const busca = await connect.post('users/update-process-file', req.body, {
         headers: {
             'Accept': 'application/json',
             "Authorization":  req.headers.authorization
@@ -46,7 +46,7 @@ exports.updt = async (req, res, next) => {
 }
 
 exports.deleta = async (req, res, next) => {
-    const busca = await connect.delete('/users/' + req.params.id, {
+    const busca = await connect.delete('users/' + req.params.id, {
         headers: {
             'Accept': 'application/json',
             "Authorization":  req.headers.authorization

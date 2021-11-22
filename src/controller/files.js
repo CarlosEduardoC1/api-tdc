@@ -2,7 +2,7 @@
 const connect = require('../services/connect');
 
 exports.salva = async (req, res, next) => {
-    const busca = await connect.get('/files', req.body, { headers: {
+    const busca = await connect.get('files', req.body, { headers: {
             'Accept': 'application/json',
             "Authorization":  req.headers.authorization
         } })
@@ -11,7 +11,7 @@ exports.salva = async (req, res, next) => {
 }
 
 exports.lista = async (req, res, next) => {
-    const busca = await connect.get('/files/get-names/' + req.params.user + '/' + req.params.processo, req.body, { headers: {
+    const busca = await connect.get('files/get-names/' + req.params.user + '/' + req.params.processo, req.body, { headers: {
             'Accept': 'application/json',
             "Authorization":  req.headers.authorization
         } })
@@ -20,7 +20,7 @@ exports.lista = async (req, res, next) => {
 }
 
 exports.delete = async (req, res, next) => {
-    const busca = await connect.post('/files/delete-files', req.body, { headers: {
+    const busca = await connect.post('files/delete-files', req.body, { headers: {
             'Accept': 'application/json',
             "Authorization":  req.headers.authorization
         } })

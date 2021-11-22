@@ -2,7 +2,7 @@
 const connect = require('../services/connect');
 
 exports.salva = async (req, res, next) => {
-    const busca = await connect.post('/processos/create/process', req.body, { headers: {
+    const busca = await connect.post('processos/create/process', req.body, { headers: {
         'Accept': 'application/json',
         "Authorization":  req.headers.authorization
     } })
@@ -11,7 +11,7 @@ exports.salva = async (req, res, next) => {
 }
 
 exports.lista = async (req, res, next) => {
-    const busca = await connect.get('/processos/get/' + req.params.id, req.body, { headers: {
+    const busca = await connect.get('processos/get/' + req.params.id, req.body, { headers: {
         'Accept': 'application/json',
         "Authorization":  req.headers.authorization
     } })
@@ -20,7 +20,7 @@ exports.lista = async (req, res, next) => {
 }
 
 exports.updt = async (req, res, next) => {
-    const busca = await connect.post('/users/update-data/' + req.params.id, req.body, { headers: {
+    const busca = await connect.post('users/update-data/' + req.params.id, req.body, { headers: {
         'Accept': 'application/json',
         "Authorization":  req.headers.authorization
     } })
