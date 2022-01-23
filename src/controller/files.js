@@ -3,7 +3,7 @@ const connect = require('../services/connect');
 
 exports.salva = async (req, res, next) => {
     await connect.get('files', req.body)
-        .then(response => { res.status(200).json(response.data); })
+        .then(response => { console.log(response.data); res.status(200).json(response.data); })
         .catch(error => { console.log(error); res.status(400).json(error) });
 }
 
