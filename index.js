@@ -16,7 +16,7 @@ app.use(cors());
 app.options('*', cors());
 app.use(express.json()); //tornar o corpo inteligivel para o javascript. Transforma a requisição em json
 
-app.use('/', pingRouter);
+app.use('/ping', pingRouter);
 app.use('/auth', authRouter);
 app.use('/users', usersRouter);
 // app.use('/recuperarsenha', recuperarSenhaRouter);

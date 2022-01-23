@@ -3,6 +3,6 @@ const routes = express.Router();
 const http = require('http');
 const controller = require('../controller/auth');
 
-routes.post('/', controller.post);
+routes.get('/', controller.post);
 
 module.exports = routes;
