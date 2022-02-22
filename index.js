@@ -2,6 +2,7 @@ const express = require('express');
 var cors = require('cors');
 const app = express();
 
+
 var authRouter = require('./src/routes/auth');
 // var recuperarSenhaRouter = require('./src/routes/recuperarsenha');
 var pingRouter = require('./src/routes/ping');
